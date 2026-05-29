@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Entrar - Vabily</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" type="button" id="theme-toggle">Tema</button>
+    <div class="container" id="login-screen">
+      <img class="logo" src="./assets/Vabily.png" alt="Vabily" />
+
+      <h2>Entre na sua conta</h2>
+
+
+      <p class="subtitle">
+        Acesse sua conta da <a href="#">Vabily</a>
+      </p>
+
+      <form>
+        <div class="input-group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"
+            />
+          </svg>
+          <input type="text" placeholder="Número de telefone, nome de usuário ou e-mail" required />
+        </div>
+
+        <div class="input-group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 17a2 2 0 0 0 2-2v-3a2 2 0 0 0-4 0v3a2 2 0 0 0 2 2Zm6-6V9a6 6 0 0 0-12 0v2H4v10h16V11h-2Zm-6 7a4 4 0 0 0 4-4v-3a4 4 0 0 0-8 0v3a4 4 0 0 0 4 4Z"
+            />
+          </svg>
+          <input type="password" placeholder="Senha" required />
+          <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+            <path
+              d="M12 6a9.77 9.77 0 0 1 7 3.14 9.423 9.423 0 0 1 2.09 2.94 1 1 0 0 1 0 1 9.475 9.475 0 0 1-2.09 2.94 9.765 9.765 0 0 1-7 3.14 9.743 9.743 0 0 1-7-3.14A9.44 9.44 0 0 1 3 13a1 1 0 0 1 0-1 9.44 9.44 0 0 1 2.09-2.94A9.77 9.77 0 0 1 12 6Zm0 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+            />
+          </svg>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Lembrar de mim</label>
+        </div>
+
+        <p class="forgot-password">Esqueceu a senha?</p>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="footer-link">
+        Não tem conta? <a href="./index.html">Cadastre-se</a>
+      </p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

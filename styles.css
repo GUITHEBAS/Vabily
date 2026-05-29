@@ -1,0 +1,284 @@
+/* Variáveis de cor */
+:root {
+  /* Fonte */
+  --font-main: Monaco, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+
+  /* Paleta suave (claro) */
+  --bg: #cd79cd;
+  --bg-accent: #7e46c6;
+  --panel: rgba(255, 255, 255, 0.32);
+
+
+  --primary: #9370db; /* roxo */
+  --primary-2: #9583b6;
+  --primary-ink: #3b265a;
+
+  --text: #3b3152;
+  --text-2: #3b2f5f;
+  --text-muted: #b18db1; 
+
+  --input-bg: rgba(176, 160, 185, 0.55);
+  --input-border: rgba(147, 112, 219, 0.25);
+
+  --btn-bg: var(--primary);
+  --btn-text: #d8d1cd;
+
+  --highlight: #c737c7;
+  --link: #9370db;
+
+  --eye-icon: var(--text);
+
+}
+
+/* Tema escuro */
+:root[data-theme="dark"] {
+  --bg: #1a1024;
+  --bg-accent: #2a153a;
+  --panel: rgba(20, 12, 30, 0.68);
+
+
+  --primary: #9370db;
+  --primary-2: #9583b6;
+  --primary-ink: #1b122a;
+
+  --text: #d8d1cd;
+  --text-2: #c8a2c8;
+  --text-muted: rgba(216, 209, 205, 0.75);
+
+  --input-bg: rgba(216, 209, 205, 0.08);
+  --input-border: rgba(147, 112, 219, 0.35);
+
+  --btn-bg: var(--primary);
+  --btn-text: #d8d1cd;
+
+  --highlight: #c8a2c8;
+  --link: #9583b6;
+
+  --eye-icon: var(--text);
+
+}
+
+
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: radial-gradient(1200px 600px at 20% 10%, var(--bg-accent), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, rgba(149, 131, 182, 0.25), transparent 50%),
+    var(--bg);
+
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+.container {
+  width: 320px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  padding: 18px 14px;
+}
+
+
+svg {
+  fill: var(--text);
+  margin-bottom: 20px;
+}
+
+
+/* Ícone com circle bg */
+.icon-circle {
+  background: linear-gradient(180deg, rgba(106, 76, 255, 0.25), rgba(106, 76, 255, 0.08));
+  border: 1px solid rgba(106, 76, 255, 0.25);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+
+/* Texto título e subtítulo */
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+
+h2 {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.subtitle a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* Input com ícones */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 38px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  border-radius: 3px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-group svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  fill: var(--eye-icon);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  margin: 0;
+}
+
+/* Eye icon botão */
+.input-group .eye-icon {
+  right: 10px;
+  left: auto;
+  cursor: pointer;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Rodapé com link */
+.footer-link {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-link a {
+  color: var(--link);
+
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Checkbox linha */
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: right;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+/* Botão alternar tema */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+
+:root[data-theme="dark"] .theme-toggle {
+  background: rgba(30, 24, 48, 0.65);
+  border-color: rgba(232, 226, 255, 0.22);
+}
+
+/* Tela inicia visível, outras escondidas */
+#welcome-screen {
+  display: block;
+}
+
+#register-screen,
+#login-screen {
+  display: none;
+  opacity: 0;
+}
+
+
